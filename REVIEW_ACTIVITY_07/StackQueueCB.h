@@ -2,7 +2,7 @@
 #define STACKQUEUECB_H
 
 #include <stdbool.h>
-#define MAX 20
+#define MAX 10
 
 typedef char String[20];
 typedef struct {

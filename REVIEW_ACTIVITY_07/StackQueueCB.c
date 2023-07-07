@@ -99,9 +99,9 @@ void enqueue(VirtualSpace* A, Queue *Q, Product P){
 }
 
 int dequeue(VirtualSpace* A, Queue *Q){
-	if(!isEmpty()){
-		
-	}
+//	if(!isEmpty()){
+//		
+//	}
 }
 int front(VirtualSpace* A, Queue *Q);
 
@@ -118,4 +118,12 @@ bool isFullStack(VirtualSpace A, StackList Q);
 
 void displayQueue(VirtualSpace A, Queue Q);
 void displayStack(VirtualSpace A, StackList S);
-void visualizeVspace(VirtualSpace A);
+void visualizeVspace(VirtualSpace A){
+	int i;
+	printf("------------VSPACE------------\n");
+	printf("%5s  | %10s  | %5s\n" , "INDEX", "DATA", "NEXT");
+	for(i = 0; i<MAX; i++){
+		printf("%5d  | %10s  | %5d\n" , i, A.data[i].items.prodName, A.data[i].link);
+	}
+	printf("Avail Index : %d", A.avail);
+}
